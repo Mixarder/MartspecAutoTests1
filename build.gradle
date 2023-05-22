@@ -1,0 +1,47 @@
+plugins {
+
+
+    id 'java-library'
+
+}
+
+
+repositories {
+
+    mavenCentral()
+
+}
+
+dependencies {
+
+    implementation 'org.testng:testng:7.7.0'
+    implementation 'org.junit.jupiter:junit-jupiter:5.9.2'
+    implementation 'io.netty:netty-codec:4.1.90.Final'
+    implementation 'org.testng:testng:7.7.0'
+    implementation 'org.testng:testng:7.7.0'
+    implementation 'org.testng:testng:7.7.0'
+    implementation 'org.testng:testng:7.7.0'
+    implementation 'org.testng:testng:7.7.0'
+    implementation 'com.codeborne:selenide:6.12.3'
+    implementation 'com.codeborne:selenide:6.12.3'
+    implementation 'com.codeborne:selenide:6.12.3'
+    implementation 'com.codeborne:selenide:6.12.3'
+    testImplementation(
+
+            'com.codeborne:selenide:6.12.3',
+
+            'org.junit.jupiter:junit-jupiter:5.9.2'
+    )
+
+}
+
+tasks.withType(JavaCompile).configureEach {
+
+    options.encoding = 'UTF-8'
+}
+
+test {
+
+    useJUnitPlatform()
+
+}
