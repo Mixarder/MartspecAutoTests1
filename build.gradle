@@ -43,5 +43,23 @@ tasks.withType(JavaCompile).configureEach {
 test {
 
     useJUnitPlatform()
+    testLogging {
+        events "failed",
+
+                "passed",
+
+                "skipped",
+
+                "standardOut",
+
+                "standardError"
+
+        exceptionFormat "full"
+
+        showExceptions true
+
+        showCauses true
+
+    }
 
 }

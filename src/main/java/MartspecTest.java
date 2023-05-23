@@ -94,9 +94,7 @@ public class MartspecTest {
                 " nutrition"));
 
         // Проверка тега meta
-        $("meta[name='description']").shouldHave(attribute("content", "Track" +
-                " vitamins on your Apple Watch with easy to use app, all records are synced to Apple Health. " +
-                "Free App without advertisements."));
+        $("meta[name='description']").shouldHave(attribute("content","Easily track your vitamins, minerals, pills, and supplements on your Apple Watch, iPhone, iPad, or Mac with our user-friendly app. Free data sync with Apple Health."));
     }
 
     /**
