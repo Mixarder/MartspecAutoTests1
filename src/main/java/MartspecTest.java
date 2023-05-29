@@ -28,11 +28,10 @@ public class MartspecTest {
         Selenide.open("https://martspec.com/ru");
 
         // Проверка тега На Главной title
-        $("title").shouldHave(attribute("text", "Фитнес и Здоровье"));
+        $("title").shouldHave(attribute("text", "Martspec — трекер твоего здоровья"));
 
         // Проверка тега на Главной meta
-        String expectedMetaContent = "Легкий и удобный способ ввода показетелей здоровья с Apple часов iPhone," +
-                " iPad и Mac. Синхронизация с Apple Здоровье. Все работает быстрок и без реклам!";
+        String expectedMetaContent = "Приложения для тех, кто заботится о своём здоровье. Удобный и простой способ следить за параметрами тела и своим эмоциональным состоянием.";
         String actualMetaContent = $("meta[name='description']").getAttribute("content");
 
         // Замена неразрывного пробела на обычный пробел
@@ -52,13 +51,10 @@ public class MartspecTest {
         $(".nav-link.dropdown-item[href='https://martspec.com/ru/vitamin']").click();
 
         // Проверка тега title
-        $("title").shouldHave(attribute("text", "Vitamin - Учет принятия " +
-                "витаминов"));
+        $("title").shouldHave(attribute("text", "Витамин – трекер сбалансированного и здорового питания"));
 
         // Проверка тега meta
-        $("meta[name='description']").shouldHave(attribute("content", "Учет" +
-                " приема витаминов легко и быстро с ваших умных часов Apple Watch. Cинхронизация с приложением " +
-                "Apple Здоровье. Работает бесплатно и без реклам!"));
+        $("meta[name='description']").shouldHave(attribute("content", "Отслеживайте витамины, минералы и другие добавки на Apple Watch, iPhone, iPad или Mac с помощью нашего удобного приложения. Бесплатная синхронизация данных с Apple Health."));
     }
 
 
@@ -94,7 +90,7 @@ public class MartspecTest {
                 " nutrition"));
 
         // Проверка тега meta
-        $("meta[name='description']").shouldHave(attribute("content","Easily track your vitamins, minerals, pills, and supplements on your Apple Watch, iPhone, iPad, or Mac with our user-friendly app. Free data sync with Apple Health."));
+        $("meta[name='description']").shouldHave(attribute("content", "Easily track your vitamins, minerals, pills, and supplements on your Apple Watch, iPhone, iPad, or Mac with our user-friendly app. Free data sync with Apple Health."));
     }
 
     /**
